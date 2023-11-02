@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "主页 - 第二大脑";
+    Layout = "_LayoutIndex";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a href="/findwords/" target="_blank">
+        <playground-entrance style="display:inline-block;">
+            <playground-text>🎂点击访问逐字词列表查询rarara</playground-text>
+        </playground-entrance>
+    </a><br>
+    <a href="/syntax/" target="_blank">
+        <playground-entrance style="display:inline-block;">
+            <playground-text>🤖点击访问文法注疏</playground-text>
+        </playground-entrance>
+    </a><br>
+    <a href="https://open.wudaoai.com/" target="_blank">
+        <playground-entrance style="display:inline-block;">
+            <playground-text style="padding: 10px 0px;line-height:normal">🍱悟道续写<br>（进入体验中心续写）</playground-text>
+        </playground-entrance>
+    </a><br>
+    <a href="/storageManager/" target="_blank">
+        <playground-entrance class="superEnt" style="display:inline-block;border: 3px solid #ff9900;font-weight: bold;">
+            <playground-text style="padding: 10px 0px;line-height:normal">🏵记忆宫殿<br>（原🏀仓储管理）</playground-text>
+        </playground-entrance>
+    </a><br>
+    <a href="/storageManager/%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86ToDo" target="_blank">
+        <playground-entrance style="display:inline-block;">
+            <playground-text>🥘Todo List事件管理</playground-text>
+        </playground-entrance>
+    </a><br>
+    <a style="display:inline-block;height:30px;"></a><br>
+    <a class="nav-link text-dark" asp-area="" asp-page="/Clipboard">
+        <playground-entrance style="display:inline-block;">
+            <playground-text>📋clipboard 剪贴板管理</playground-text>
+        </playground-entrance>
+    </a>
+    <a href="/GPTwrite/" target="_blank">
+        <playground-entrance style="display:inline-block;">
+            <playground-text>🍱GPT续写</playground-text>
+        </playground-entrance>
+    </a><br>
+    <a href="/AlignService/" target="_blank">
+        <playground-entrance class="disableEnt" style="display:inline-block;">
+            <playground-text style="padding: 10px 0px;line-height:normal">🐕‍🦺Align
+                Service<br>智能自动分类</playground-text>
+        </playground-entrance>
+    </a>
+    <a class="nav-link text-dark" asp-area="" asp-page="/Colaboration">
+        <playground-entrance class="disableEnt" style="display:inline-block;">
+            <playground-text
+                style="padding: 10px 0px;line-height:normal">🧩Shared-Editing-Proposal<br>共享编辑库</playground-text>
+        </playground-entrance>
+    </a>
+
+    <a href="/Shared-Editing-Proposal" target="_blank"></a>
+    <a href="/simwords/" target="_blank">
+        <playground-entrance class="disableEnt" style="display:inline-block;">
+            <playground-text>📙点击访问佳辞谱</playground-text>
+        </playground-entrance>
+    </a>
+    <a href="/Website-Manage-Interface/" target="_blank">
+        <playground-entrance style="display:inline-block;">
+            <playground-text>🗜️点击访问网站管理</playground-text>
+        </playground-entrance>
+    </a>
+    <partial name="/Pages/Advertisement.cshtml" />
+</div>

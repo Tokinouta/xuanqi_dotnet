@@ -1,0 +1,72 @@
+html {
+    background-color: rgb(209, 0, 35);
+}
+
+body {
+    border-top: 5px solid rgb(223, 1, 1);
+    background-image: linear-gradient(rgb(207, 122, 66), rgb(209, 0, 35));
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.NOBORDER {
+    box-shadow: none;
+    padding: 2px 0px;
+}
+
+.vertical_center {
+    margin-top: 25px;
+    transform: translateY(-50%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(67, 27, 1);
+}
+
+playground-entrance {
+    border-radius: 25px;
+    border: 2px solid rgb(116, 43, 43);
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 280px;
+    height: 86px;
+    margin: 4px;
+    background-image: linear-gradient(rgb(253, 218, 129), rgb(242, 255, 0))
+}
+
+playground-text {
+    padding: 20px 1px;
+    display: inline-block;
+    line-height: 35px;
+    font-family: "Fira Sans", serif;
+    font-size: 20px;
+}
+
+playground-entrance:hover {
+    box-shadow: 1px 1px 15px rgb(253, 223, 133);
+    background-image: linear-gradient(rgb(255, 236, 233), rgb(255, 186, 174))
+}
+
+playground-entrance:active {
+    box-shadow: 1px 1px 20px rgb(234, 181, 48);
+    background-image: linear-gradient(rgb(243, 172, 124), rgba(255, 138, 165))
+}
+
+.disableEnt {
+    color: white;
+    background-image: linear-gradient(rgb(88, 20, 8), rgb(43, 21, 17))
+}
+
+.superEnt {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(242, 255, 0), rgb(242, 255, 0), rgb(255, 174, 0))
+}
+
+playground-entrance.disableEnt:hover {
+    color: black;
+}
