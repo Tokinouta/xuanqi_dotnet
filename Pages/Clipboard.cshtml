@@ -24,8 +24,9 @@
 
     <div class="m-3">
         <div v-for="clipboard_txt in clipboard_txts">
-            <span style="margin-left: 5px;">文本剪贴板（每2秒自动保存）<b-button variant="warning"
-                    @@click="copyStringToClipboard(clipboard_txt)">复制文本</b-button></span>
+            <span style="margin-left: 5px;">文本剪贴板（每2秒自动保存）
+                <b-button variant="warning" @@click="copyStringToClipboard(clipboard_txt)">复制文本</b-button>
+            </span>
             <span class="input_box" style="display: block;">
                 <center>
                     <textarea rows="9" autofocus id="mainsearchbox" v-model="clipboard_txt" placeholder="在此输入跨设备剪贴文本"
@@ -59,12 +60,6 @@
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"
-        integrity="sha256-JLmknTdUZeZZ267LP9qB+/DT7tvxOOKctSKeUC2KT6E=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"
-        integrity="sha256-kXTEJcRFN330VirZFl6gj9+UM6gIKW195fYZeR3xDhc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"
-        integrity="sha256-duDNIhfVrUK7HB/57nPLxN/j92aM3rhTUFzVI/H5ex8=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         function copyStringToClipboard(str) {
             try { // Remove temporary element
