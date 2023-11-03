@@ -6,18 +6,18 @@ namespace xuanqi.Pages;
 
 [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 [IgnoreAntiforgeryToken]
-public class ColaborationModel : PageModel
+public class CollaborationModel : PageModel
 {
-    public List<ColaborationEntry> Storages { get; set; }
+    public List<CollaborationEntry> Storages { get; set; }
 
     // public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
-    private readonly ILogger<ColaborationModel> _logger;
+    private readonly ILogger<CollaborationModel> _logger;
 
-    public ColaborationModel(ILogger<ColaborationModel> logger)
+    public CollaborationModel(ILogger<CollaborationModel> logger)
     {
         _logger = logger;
-        Storages = new List<ColaborationEntry>
+        Storages = new List<CollaborationEntry>
         {
             new() { Name = "老彭语录、百家争鸣、名梗记录etc", Url = """https://lanig8kpv8.xuduan.vip/storageManager/viewOnly/喵喵喵喵喵/生活暗记anki库/\"高中老彭语录&百家争鸣语录！|2022-01-21 15:51:31\"/2da0fb493ca6c05915c7297a10b8c0230d12d7453502204666e51096dbc47129?auth2=b<iS(x|{n+9OO%o2Hl&:""", Description = "致汇文初高中，经典咏流传" }
         };
@@ -39,7 +39,7 @@ public class ColaborationModel : PageModel
     }
 }
 
-public class ColaborationEntry
+public class CollaborationEntry
 {
     public string Name { get; set; } = "";
     public string Url { get; set; } = "";

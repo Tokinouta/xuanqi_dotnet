@@ -1,5 +1,5 @@
 @page
-@model ColaborationModel
+@model CollaborationModel
 @{
     ViewData["Title"] = "共享编辑 - 第二大脑";
     Layout = "_LayoutContent";
@@ -62,16 +62,19 @@
             },
             methods: {
                 addTree: function () {
-                    al2 = decodeURI(this.addLink.split('?auth2=')[0] + '?auth2=' + this.addLink.split('?auth2=')[1].replace(/%/g, '%25'))
-                    axios.post('/Shared-Editing-Proposal/addSharedTree', { info: [this.addName, al2, this.addDesc] }).then(function (response) {
-                        app.sharedData = response.data
+                    @* al2 = decodeURI(this.addLink.split('?auth2=')[0] + '?auth2=' + this.addLink.split('?auth2=')[1].replace(/%/g, '%25')) *@
+                    al2 = 'rarara'
+                    axios.post('/api/Shared-Editing-Proposal/addSharedTree', { info: [this.addName, al2, this.addDesc] }).then(function (response) {
+                        @* app.sharedData = response.data *@
+                        console.log("succeed adding")
                     }).catch(function (error) {
                         console.log(error);
                     })
                 },
                 deleteTree: function (row) {
-                    axios.post('/Shared-Editing-Proposal/deleteSharedTree', { info: row }).then(function (response) {
+                    axios.post('/api/Shared-Editing-Proposal/deleteSharedTree', { info: row }).then(function (response) {
                         app.sharedData = response.data
+                        console.log("succeed deleting")
                     }).catch(function (error) {
                         console.log(error);
                     })

@@ -25,6 +25,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UsePathBase("/api");
+
 app.UseAuthorization();
 
 app.MapRazorPages();
